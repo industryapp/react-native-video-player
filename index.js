@@ -26,9 +26,6 @@ const styles = StyleSheet.create({
   playArrow: {
     color: 'white',
   },
-  video: Platform.Version === 25 ? {} : {
-    backgroundColor: 'black',
-  },
   controls: {
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     height: 48,
@@ -430,7 +427,6 @@ export default class VideoPlayer extends Component {
         <Video
           {...props}
           style={[
-            styles.video,
             this.getSizeStyles(),
             style,
             customStyles.video,
